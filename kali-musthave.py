@@ -1,8 +1,8 @@
 #!/usr/bin/python2
 import os, time
 print('\033[96m Hello in kali musthave kali rules \033[0m\n\nso first update kali')
+version = raw_input('but before update do you have the newest kali ? y/n')
 def repofix():
-    version = raw_input('but before update do you have the newest kali ? y/n')
     os.system(''' # Regular repositories
 deb http://http.kali.org/kali sana main non-free contrib
 deb http://security.kali.org/kali-security sana/updates main contrib non-free
@@ -30,7 +30,7 @@ print('ok')
 print('now some tools')
 os.system('apt install -y git python3 python3-pip build-essential > /dev/null')
 os.system('git clone https://github.com/arismelachroinos/lscript && cd lscript && chmod +x install.sh && ./install.sh')
-os.system('apt install -y aircrack-ng mdk3 pyrit alsa-utils cowpatty terminator websploit hydra metasploit-framework armitage routersploit hashcat tor proxychains ncat nmap zenmap lynis debsums debsecan clamav needrestart fail2ban apt-listbugs apt-listchanges debian-goodies')
+os.system('apt install -y bleachbit preload aircrack-ng mdk3 pyrit alsa-utils cowpatty terminator websploit hydra metasploit-framework armitage routersploit hashcat tor proxychains ncat nmap zenmap lynis debsums debsecan clamav needrestart fail2ban apt-listbugs apt-listchanges debian-goodies')
 print('done')
 print('now this script will create a function to your system\nwhichupdates kali')
 os.system("""function apt-updater {
